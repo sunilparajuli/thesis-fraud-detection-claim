@@ -1,0 +1,19 @@
+# System files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and Models
+data/
+models/
+
+# Documentation (Excluded as per request)
+thesis_proposal.md
+implementation_plan.md
+walkthrough.md
+task.md
+
+# Environment
+.env
+venv/
+env/
