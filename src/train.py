@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import xgboost as xgb
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score, f1_score
 from sklearn.preprocessing import StandardScaler, LabelEncoder
@@ -55,15 +55,12 @@ def prepare_and_train():
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42, stratify=y)
     
-    # 2. Train XGBoost Model
-    print("Training XGBoost model...")
-    model = xgb.XGBClassifier(
+    # 2. Train Random Forest Model
+    print("Training Random Forest model...")
+    model = RandomForestClassifier(
         n_estimators=100,
         max_depth=6,
-        learning_rate=0.1,
-        random_state=42,
-        use_label_encoder=False,
-        eval_metric='logloss'
+        random_state=42
     )
     
     model.fit(X_train, y_train)
