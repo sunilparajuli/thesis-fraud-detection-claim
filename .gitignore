@@ -12,6 +12,9 @@ thesis_proposal.md
 implementation_plan.md
 walkthrough.md
 task.md
+thesis_report_data.md
+plots/
+medicare fraud detection.pdf
 
 # Environment
 .env
