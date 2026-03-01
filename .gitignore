@@ -15,6 +15,7 @@ task.md
 thesis_report_data.md
 plots/
 medicare fraud detection.pdf
+*.docx
 
 # Environment
 .env
